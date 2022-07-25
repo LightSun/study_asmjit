@@ -22,6 +22,9 @@ using namespace asmjit;
 static void ASMJIT_NOINLINE testX86AssemblerBase(AssemblerTester<x86::Assembler>& tester) noexcept {
   using namespace x86;
 
+    //aaa（ASCII adjust after addition）指令，是BCD指令集中的一个指令，
+    //      用于在两个未打包的BCD值相加后，调整al和ah寄存器的内容。
+
   TEST_INSTRUCTION("37"                            , aaa(ax));
   TEST_INSTRUCTION("D501"                          , aad(ax, 1));
   TEST_INSTRUCTION("D401"                          , aam(ax, 1));
