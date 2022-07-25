@@ -26,6 +26,9 @@ endif()
 
 set_property(SOURCE main.cpp APPEND_STRING PROPERTY COMPILE_FLAGS
     "-march=native -mssse3 -msse3 -msse4.2 -mavx -mavx2 -mavx512f -mavx512dq -mavx512vl ")
-add_executable(stu_asm main.cpp)
+add_executable(stu_asm
+    main.cpp
+    asm_base1.cpp
+    )
 
 
